@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fieldnotes - Excalidraw Icon Studio</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f4f2ed;color:#243449;font:15px/1.5 system-ui,sans-serif}
+    header{padding:28px 40px;background:#243449;color:#fff}h1{margin:0;font-size:28px;letter-spacing:-1px}
+    header p{margin:6px 0 0;color:#c7d5e2}.toolbar{position:sticky;top:0;padding:16px 40px;background:#fff;display:flex;gap:12px;align-items:center;z-index:2;border-bottom:1px solid #ddd}
+    select,button{font:inherit;padding:9px 14px;border:1px solid #b8c4cf;border-radius:7px;background:white;color:#243449}button{cursor:pointer}button.primary{background:#246b70;color:white;border-color:#246b70}
+    main{padding:28px 40px;max-width:1500px;margin:auto}h2{font-size:26px;margin:0 0 6px}.description{max-width:900px;color:#526477}.meta{font-size:13px;color:#526477}
+    .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:24px}.card{background:#fff;border:1px solid #dce2e7;border-radius:12px;padding:12px;text-align:center}.card svg{display:block;width:100%;height:150px}.card h3{font-size:13px;margin:6px 0}.card p{font-size:11px;color:#637386;margin:0}
+    .examples{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}.example{background:#fff;border:1px solid #dce2e7;border-radius:10px;padding:18px;flex:1;min-width:360px}.example h3{margin:0 0 10px;font-size:15px}.steps{display:flex;align-items:center;gap:10px}.steps svg{width:90px;height:90px}.step{text-align:center;font-size:11px;flex:1}.arrow{color:#7d8a97}
+    #status{margin-left:auto;font-size:12px;max-width:350px}.dark{background:#18232e;color:#e5ecf2}.dark .card,.dark .example{background:#243449;border-color:#435668}.dark .card svg{filter:invert(.86) hue-rotate(170deg)}.dark .card p{color:#bdcbd8}
+    @media(max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.toolbar{flex-wrap:wrap}main,header{padding:24px}}
+  </style>
+</head>
+<body>
+  <header><h1>FIELDNOTES / Icon Studio</h1><p>Original editable visual vocabularies for Excalidraw. Browser-authored, individually grouped, deliberately useful.</p></header>
+  <div class="toolbar">
+    <select id="pack" aria-label="Choose icon pack"></select>
+    <button class="primary" id="scene">Save scene</button>
+    <button id="library">Save library</button>
+    <button id="preview">Save PNG preview</button>
+    <button id="theme">Contrast check</button>
+    <span id="status" role="status">Ready</span>
+  </div>
+  <main id="content"></main>
+  <script src="studio.js"></script>
+</body>
+</html>
